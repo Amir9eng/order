@@ -4,7 +4,7 @@ import ProductCard from './ProductCard'
 
 const ProductList = () => {
   return (
-    <div className={styles.container}>
+    <div id='Menu' className={styles.container}>
       <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
       <p className={styles.desc}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
