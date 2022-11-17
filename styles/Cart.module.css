@@ -79,7 +79,7 @@
         margin-bottom: 20px;
     }
     .imgContainer {
-        width: 36vw;
+        width: 35vw;
         height: 35vw;
     }
     .name,
@@ -106,4 +106,19 @@
     .wrapper {
         width: 100%;
     }
+}
+
+.paymentMethods {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: white;
+    color: teal;
+    font-weight: bold;
 }

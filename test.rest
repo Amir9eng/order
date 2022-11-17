@@ -1,0 +1,12 @@
+### Request 1
+POST  http://localhost:3000/api/products
+Content-Type: application/json
+
+
+{
+  "title": "pizza5",
+  "img": "/images/pizza.png",
+  "desc": "desc5",
+  "prices": [12,13,14],
+  "extraOptions": [{"text": "Spicy sauce", "price": 2}, {"text": "Garlic sauce", "price": 3}] 
+}
