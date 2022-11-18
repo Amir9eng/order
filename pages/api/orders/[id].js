@@ -7,7 +7,14 @@ const handler = async(req, res) => {
         query: { id },
     } = req;
 
-    if (method === "GET") {}
+    if (method === "GET") {
+        try {
+            const order = await Order.findById(id);
+            res.status(201).json(order);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    }
     if (method === "PUT") {}
     if (method === "DELETE") {}
 };

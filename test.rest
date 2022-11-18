@@ -4,9 +4,9 @@ Content-Type: application/json
 
 
 {
-  "title": "pizza5",
+  "title": "pizza7",
   "img": "/images/pizza.png",
-  "desc": "desc5",
-  "prices": [12,13,14],
+  "desc": "desc7",
+  "prices": [17,19,21],
   "extraOptions": [{"text": "Spicy sauce", "price": 2}, {"text": "Garlic sauce", "price": 3}] 
 }
