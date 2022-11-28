@@ -25,7 +25,7 @@ export const Add = ({ setClose }) => {
   const handleCreate = async () => {
     const data = new FormData()
     data.append('file', file)
-    data.append('upload_presets', 'uploads')
+    data.append('upload_preset', 'uploads')
     try {
       const uploadRes = await axios.post(
         'https://api.cloudinary.com/v1_1/amirmukhtar/image/upload',
