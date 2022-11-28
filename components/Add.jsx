@@ -10,7 +10,7 @@ export const Add = ({ setClose }) => {
   const [extraOptions, setExtraOptions] = useState([])
   const [extra, setExtra] = useState(null)
 
-  const changePrices = (e, index) => {
+  const changePrice = (e, index) => {
     const currentPrices = prices
     currentPrices[index] = e.target.value
     setPrices(currentPrices)
@@ -31,7 +31,16 @@ export const Add = ({ setClose }) => {
         'https://api.cloudinary.com/v1_1/amirmukhtar/image/upload',
         data
       )
-      console.log(uploadRes.dat)
+      const { url } = uploadRes.data
+      const newProduct = {
+        desc,
+        title,
+        prices,
+        extraOptions,
+        img: url
+      }
+      await axios.post('http://localhost:3000/api/products', newProduct)
+      setClose(true)
     } catch (error) {
       console.log(error)
     }
@@ -69,19 +78,19 @@ export const Add = ({ setClose }) => {
             className={`${styles.input} ${styles.inputSm}`}
             type='number'
             placeholder='Small'
-            onChange={() => changePrice(e, 0)}
+            onChange={e => changePrice(e, 0)}
           />
           <input
             className={`${styles.input} ${styles.inputSm}`}
             type='number'
             placeholder='Medium'
-            onChange={() => changePrice(e, 1)}
+            onChange={e => changePrice(e, 1)}
           />
           <input
             className={`${styles.input} ${styles.inputSm}`}
             type='number'
             placeholder='Large'
-            onChange={() => changePrice(e, 2)}
+            onChange={e => changePrice(e, 2)}
           />
         </div>
         <div className={styles.item}>
