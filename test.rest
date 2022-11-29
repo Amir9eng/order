@@ -10,3 +10,17 @@ Content-Type: application/json
   "prices": [17,19,21],
   "extraOptions": [{"text": "Spicy sauce", "price": 2}, {"text": "Garlic sauce", "price": 3}] 
 }
+
+function fearNotLetter(str) {
+  let alphabets = 'abcdefghijklmnopqrstuvwxyz'
+  let startingPosition = alphabets.indexOf(str[0])
+  let focusedAlphabets = alphabets.slice(startingPosition)
+  for(let i =0; i< str.length; i+=1){
+    if(str[i] != focusedAlphabets[i]){
+      return focusedAlphabets[i]
+    }
+  }
+}
+
+let result=fearNotLetter("abce");
+console.log(result)
