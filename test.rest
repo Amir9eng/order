@@ -22,5 +22,5 @@ function fearNotLetter(str) {
   }
 }
 
-let result=fearNotLetter("abce");
+let result = fearNotLetter("abce");
 console.log(result)
